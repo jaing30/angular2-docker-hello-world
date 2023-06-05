@@ -9,6 +9,7 @@ FROM node:latest
 # Add some necessary packages
 RUN apt-get update
 RUN apt-get install -y vim
+RUN npm update
 
 # Create a nodejs account, in nodejs group, with home directory /home/nodejs
 RUN mkdir -p /quickstart/app /home/nodejs && \
@@ -24,7 +25,7 @@ ADD package.json typings.json tsconfig.json systemjs.config.js index.html styles
 ADD app/* /quickstart/app/
 RUN chown -R nodejs:nodejs /quickstart
 # install npm packages as root; but allow nodejs user to install later
-RUN npm update
+#RUN npm update
 RUN npm install typescript -g
 RUN npm install --unsafe-perm=true -g now
 
