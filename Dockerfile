@@ -4,7 +4,7 @@
 #  $ docker run -it --rm -p 3000:3000 -p 3001:3001 -v $(pwd)/app:/quickstart/app angular2-quickstart
 #
 # Start with a default nodejs image
-FROM node:latest
+FROM node:20-alpine3.17
 
 # Add some necessary packages
 RUN apt-get update
