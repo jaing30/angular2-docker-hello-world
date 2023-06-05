@@ -7,8 +7,8 @@
 FROM node:20-alpine3.17
 
 # Add some necessary packages
-RUN yum update -y
-RUN yum install -y vim
+#RUN yum update -y
+#RUN yum install -y vim
 
 # Create a nodejs account, in nodejs group, with home directory /home/nodejs
 RUN mkdir -p /quickstart/app /home/nodejs && \
