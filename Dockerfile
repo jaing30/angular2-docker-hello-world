@@ -4,11 +4,11 @@
 #  $ docker run -it --rm -p 3000:3000 -p 3001:3001 -v $(pwd)/app:/quickstart/app angular2-quickstart
 #
 # Start with a default nodejs image
-FROM node:20-alpine3.17
+FROM node:latest
 
 # Add some necessary packages
-#RUN yum update -y
-#RUN yum install -y vim
+RUN apt-get update
+RUN apt-get install -y vim
 
 # Create a nodejs account, in nodejs group, with home directory /home/nodejs
 RUN mkdir -p /quickstart/app /home/nodejs && \
