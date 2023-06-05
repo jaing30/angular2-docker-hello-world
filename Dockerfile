@@ -27,9 +27,9 @@ RUN chown -R nodejs:nodejs /quickstart
 # install npm packages as root; but allow nodejs user to install later
 RUN npm install typescript -g
 RUN npm install -g @angular/cli
-#RUN npm install @angular/platform-browser --save
-#RUN npm install @angular/core --save
-#RUN npm install @angular/platform-browser-dynamic --save
+RUN npm install -g @angular/platform-browser
+RUN npm install -g @angular/core
+RUN npm install -g @angular/platform-browser-dynamic
 RUN npm install --unsafe-perm=true -g now
 
 # Startup as user nodejs
