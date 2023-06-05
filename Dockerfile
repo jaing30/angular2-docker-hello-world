@@ -9,6 +9,7 @@ FROM node:latest
 # Add some necessary packages
 RUN apt-get update
 RUN apt-get install -y vim
+RUN npm install -g npm@9.6.7
 
 # Create a nodejs account, in nodejs group, with home directory /home/nodejs
 RUN mkdir -p /quickstart/app /home/nodejs && \
