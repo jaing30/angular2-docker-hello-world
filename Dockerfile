@@ -26,6 +26,7 @@ ADD app/* /quickstart/app/
 RUN chown -R nodejs:nodejs /quickstart
 # install npm packages as root; but allow nodejs user to install later
 RUN npm install typescript -g
+RUN npm install -g @angular/cli
 #RUN npm install @angular/platform-browser --save
 #RUN npm install @angular/core --save
 #RUN npm install @angular/platform-browser-dynamic --save
